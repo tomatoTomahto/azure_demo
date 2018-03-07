@@ -116,6 +116,16 @@ has an entire library for machine learning called [MlLib](https://spark.apache.o
 feature engineering, regression, classification, ensemble learning, clustering, collaborative
 filtering, pipelining and more. 
 
+This demo creates a Pipeline in Spark to execute a series of feature transformations and train a
+linear regression model. The following diagram illustrates how Spark Pipelines work:
+
+![alt text](images/pipelines1.png "Spark Pipelines")
+
+Once a pipeline model is created, it can be used to score, or transform, test data. The model will
+perform all the feature transformations that are part of that pipeline. 
+
+![alt text](images/pipelines2.png "Spark Pipelines")
+
 1. Open a Workbench with 1VCPU and 2GB memory running the Python 2 Engine
 2. Run the script ```Time-Series/BuildModel.py```. This transforms the cleansed data in ADLS and builds a simple linear regression model. That model is then saved to ADLS for further testing. 
 3. Review the output of the script and close the Workbench. 

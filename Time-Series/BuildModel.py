@@ -111,4 +111,4 @@ pmml = toPMMLBytes(spark.sparkContext, modelData, pipelineModel)
 print(str(pmml))
 
 # Or in Spark model format
-pipelineModel.save(os.path.join(modelDir,modelName))
+pipelineModel.write().overwrite().save(os.path.join(modelDir,modelName))
